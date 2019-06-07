@@ -1,12 +1,19 @@
 #include <string>
-#include <ncurses.h>
+#include <iostream>
+#include <stdio.h>
 
 #include "Game.hpp"
 
-WINDOW* wnd;
+Game::Game(){
+    return ;
+}
+
+Game::~Game(){
+    return ;
+}
 
 int Game::init() {
-    wnd = initscr();
+    this->wnd = initscr();
     cbreak();
     noecho();
     clear();
@@ -19,7 +26,7 @@ void Game::run() {
     move(5, 5);
 
     std::string text = "Hello World";
-    for (int i = 0; i < text.size(); i++){
+    for (size_t i = 0; i < text.size(); i++){
         addch(text[i]);
         addch(' ');
     }

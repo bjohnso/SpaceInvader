@@ -1,15 +1,15 @@
-#include <ncurses.h>
 
 #include "Game.hpp"
 
-int main(int argv, char** argc){
-    int init_status = init();
+int main(){
+    Game game = Game();
+    int init_status = game.init();
 
     if (init_status == 0){
-        run();
+        game.run();
     }
 
-    close();
+    game.close();
 
     return 0;
 }
