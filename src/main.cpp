@@ -1,4 +1,6 @@
-#include "game.hpp"
+#include <ncurses.h>
+
+#include "Game.hpp"
 
 int main(int argv, char** argc){
     int init_status = init();
